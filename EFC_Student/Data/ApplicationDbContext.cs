@@ -16,8 +16,8 @@ namespace EFC_Student.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Course>()
-                .HasOne<Student>(i => i.Student)
-                .WithMany(c => Courses)
+                .HasOne(i => i.Student)
+                .WithMany(c => c.Courses)
                 .HasForeignKey(i => i.StudentId)
                 .IsRequired();
         }

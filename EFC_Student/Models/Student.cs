@@ -8,6 +8,6 @@ namespace EFC_Student.Models
         public int StudentId { get; set; }
         public string Name { get; set; }
 
-        ICollection<Course> Courses { get; set; }
+        public ICollection<Course> Courses { get; set; }
     }
 }
